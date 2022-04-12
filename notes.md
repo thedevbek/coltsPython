@@ -56,3 +56,152 @@ Directories can also be deleted using the 'rm' keyword, with the added option '-
 <!--% Dynamic Typing -->
 
 Python is highly flexible about reassigning variables to different types: boolean to a string to a number to none. This is called dynamic typing since variables can change easily. Other languages like C++, are statically-typed and variables are stuck with their originally-assigned type.
+
+<!--! String Escape Characers -->
+
+In Python there are also 'escape characters', which are 'metacharacters' - they get interpreted by Python to do something special: 1) How to make a return in string \n 2) How to make a backslash \\
+
+<!-- $ Formatting Strings -->
+
+There are also several ways to format strings in Python to <!-- $ Interpolate--> variables.
+The new way (new in Python 3.6) =>F-Strings
+x = 10
+formatted = f"I've told you {x} times already!"
+
+<!-- # Format method -->
+
+x = 10
+formatted = 'I've told you {} times already!'.format(10)
+
+<!-- @ Deprecated Format method -->
+
+x= 20
+formatted = print("I've told you %d times already!" % (x))
+
+<!-- !Converting Data Types -->
+
+In string interpolation, data types are IMPLICITLY converted into string form
+
+You can also EXPLICITLY CONVERT variables by using the name of the builtin type as a function -- int and str
+
+decimal = 12.56345634534
+integer = int(decimal)
+
+<!-- @ int removes the decimal and makes it 12 but DOES NOT ROUND -->
+
+my_list = [1, 3, 4]
+my_list_as_a_string = str(my_list)
+
+<!-- # str makes everything a string by putting '' around it  -->
+
+num = 12
+num = float(num)
+
+<!-- !Turn the num into a decimal also when divide by is used it's a float -->
+
+<!-- % Boolean and Conditional Logic -->
+
+There is a built-in function in Python called "input" that will prompt the user and store the result to a variable. input()
+
+<!-- ! Conditional Statement -->
+
+Conditional logic using if statements represents different paths a program can take based on some type of comparison of input.
+
+if some condition is True:
+(must have tab here)do something
+elif (you can sue elif as man times as you like) some other condition is True:
+do something
+else:
+do this
+
+<!-- ! Truthiness and Falseness -->
+
+In python, all conditional checks resolve to True or False.
+
+x = 1
+x is 1 #True = truthy
+x is 0 #False = falsy
+
+Beside False conditional checks other things that are <!--! naturally falsy-->
+include: empty objects, empty strings, None, and zero.
+
+<!--% Conditional Logic Statements  -->
+
+Using if statements represents different paths a program can take based on some type of comparison of input.
+
+'if, elif, else'
+
+<!-- # Comparison Operators -->
+<!-- $ a = 1 and b = 1 -->
+
+== Truthy if a has the same value as b
+
+<!-- ! a == b #True -->
+
+!= Truthy if a does NOT have the same value as b
+
+<!-- ! a != b #False -->
+
+> Truthy if a is greater than b
+
+<!-- ! a > b #False -->
+
+< Truthy if a is less than b
+
+<!-- ! a < b #False -->
+
+> = Thruthy if a is greater than or equal to b
+
+<!-- ! a >= b #True -->
+
+<=Truthy if a is less than or equal to based on
+
+<!-- ! a <= b #True -->
+
+<!-- @ Logical Operators put in if statement -->
+
+In Python, the following operators can be used to make Boolean Logic comparisons or statements.
+
+<!-- $ and -->
+
+Truthy if both a AND b are true (logical conjunction)
+
+<!-- % and example -->
+
+if a and b:
+print(c)
+
+<!-- $ or -->
+
+Truthy if either a OR b are true (logical disjunction)
+
+<!-- % or example -->
+
+if am_tired or is_bedtime:
+print('go to sleep')
+
+<!-- $ not -->
+
+Truthy if the opposite of a is true (logical negation)
+
+<!-- % not example -->
+
+if not is_weekend:
+print('go to work')
+
+<!-- ! is vs. '==' -->
+
+== and is are very similar comparators, however they are not the same.
+a = 1
+a == 1 #True Value
+a is 1 #True Memory (===)
+
+a = [1,2,3] # a list of nums
+b = [1,2,3]
+a == b #True
+a is b #True
+
+c = b
+b is c #True
+
+<!-- ! b is pointing to c in memory -->
