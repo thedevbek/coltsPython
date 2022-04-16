@@ -204,4 +204,52 @@ a is b #True
 c = b
 b is c #True
 
-<!-- ! b is pointing to c in memory -->
+<!-- ! b is pointing to c in memory  or it's like === shows exactly where it is and the value-->
+
+<!-- # LOOPS -->
+
+Collection of data we can loop through!
+We want to do something <!-- % FOR this data-->
+
+#for# item #in# iterable_object: # do something with item
+
+<!-- ! for and in is the syntax for python -->
+
+1. An iterable object is some kind of collection of items, for instance: a list of numbers, a string of characters, a range, ect.
+2. it is a new variable that can be called whatever you want
+3. item references the current position of our iterator within the iterable. It will iterate over (run through) every item of the collection and then go away when it has visited all items.
+
+<!-- @ ranges -->
+
+If we just want to print numbers, we can simply iterate over a range. A range is just a slice of the number line. Python ranges come in multiple forms:
+
+1. range(7) gives you intergers from 0-6 because the count starts at 0 since we put only 1 number in it and then it goes to 7 -1
+2. range(1,8) will give you integers from 1 to 7 because two parameters are (start, finish)
+3. range(1,10,2) will give you odds from 1 to 10 because the Third param is called the 'step', meaning how many to skip. But it can also tell you which direction to go to up or down if you have a range(1,10,-1) negative number in the step parameter.
+
+<!-- !! while loops -->
+<!--$ You can do more with a while loop than you can with a for loop
+
+We can also irerate using a while loop, which has a different format:
+        while im_tired:
+            #seek caffeine
+while loops continue to execute while a certain condition is truthy, and will end when they become falsy.
+        user_response = None
+        while user_response != 'please':
+            user_response = input('Ah ah ah, you didn't say the magic word: ')
+while loops require more careful setup than for loops, since you have to specify the termination conditions manually.
+<!-- % Be careful!! If the condition doesn't become false at some point, your loop will continue FOREVER!! -->
+
+<!-- # Controlled Exit -->
+
+The keyword break gives us the ability to exit out of while loops whenever we want:
+While True:
+command = input('Type "exit" to leave: ')
+if (command == 'exit'):
+break
+
+We an also use it to end for loops early:
+for x in range(1, 101):
+print(x)
+if x == 3:
+break
