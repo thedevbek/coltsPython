@@ -1,239 +1,186 @@
-# smile = 1
-# while smile < 11:
-#     print("\U0001f600" * smile)
-#     smile += 1
 
-# # #! Number and Math
-# # # Integer are 4, -4, 0
-# # # Floating Point (Float) are 6.1, 1.333, 0.0
+# ##Number and Math
+# ## Everything gets stored in memory because of 1 and 0, so it's all about space.
 
-# print(type(9)) # Integer
-# print(type(0.0))# Float
-# print(1/3) # division returns float, even when dividing two ints
 
-# # $ 10/3 = 3.3333 BUT if you use two // then you will get an integer.25//4 = 6
+# num=(1,4) ## integer
+# num=(1.3333, 6.1) ## Floating Point (Floats)
 
-# cash = 19867324678987.99  
-# print(cash // 5)
+# print(type(3.1)) ## give type 
 
-# new_line = 'Hello\nworld'
-# print(new_line)
-# mountains = "/\\/\\/\\"
-# print(mountains )
+# ## Math operators
+# ##  + = addition, - subtract, * multiply, / division (with decimals),// division (floor which is rounding down #),  ** exponentiation, % modulo ( gives the remainder, creates even % 2 and odd % 1)
 
-# # @ String Concatenation
 
-# str_one = 'Your'
-# str_two = 'Face'
-# str_three = print(str_one + '' + str_two) 
+## variables
 
-# username = 'Bluthedog!'
-# print('Hello there and welcome to the game ' + username)
+# x = 100 
+# khaleesi_mother_of_dragons = 1
+# print(khaleesi_mother_of_dragons + x)
 
-# str_one = 'ice'
-# str_one += 'cream'
-# print(str_one)
+# ## variables are always assigned with the variable name on the left and the value on the right of the = . Variables must be assigned before they can be used. Variables can be assigned to other variables, reassigned at any time, and assigned at the same time as other variables if it makes since.
 
-# # ! Formatting Strings
-# # # Current way
-# x = 10
-# formatted = print(f"I've told you {x} times already!")
+# python_is_awesome = 100
+# just_another_var = python_is_awesome
+# python_is_awesome = 1337
+# all, at, once = 5, 10, 15
+# print(once) ## give me 15 cause once = 15 only makes sense
 
-# guess = 8
-# print(f'Your guess of {guess} was incorrect!')
+## Data Types 
+# bool = True or False values
+# int = an integer (1,2,-3)
+# str = 'string'  a sequence of Unicode characters, e.g. 'Colt'
+# list = an ordered sequence of values of other data types, e.g. [1,2,3]
+# dict = a collection of key:values, eg. {'first_name': 'Bek', 'last_name':'Johansson'}
+# \newline = \n, to use a backslash \\, \'single\'
 
-# # # Older way
-# x = 10
-# formatted = print("I've told you {} times already!".format(10))
+# game_over = False
+# null = None
 
-# # # Deprecated way
-# x= 20
-# formatted = print("I've told you %d times already!" % (x))
+## String Concatenation Functions
 
-# first = 'Bek'
-# last = 'Johansson'
+# str_one = 'Bek'
+# str_two = 'Johansson'
+# str_three = str_one  + ' ' + str_two
+# print(str_three)
 
-# formatted = print('First Name: {}, Last Name: {}'.format(first, last))
+# cream = 'ice'
+# cream += ' cream' ## can also use - and *
+# print(cream)
 
-# decimal = 12.56345634534
-# integer = print(int(decimal))
+## Formatting strings
+## There are also several ways to format strings in Python to interpolate variables.
 
-# my_list = [1, 3, 4]
-# my_list_as_a_string = print(str(my_list))
+## F-string
+# x = 100
+# formatted = f'I\'ve told you {x} times already!'
+# print(formatted)
+## (Python 2 -> 3.5 => .format method)
+# formatted = 'I\'ve told you {} times already!'.format(10)
+# print(formatted)
+## Deprecated way of fromatting strings 
+# formatted = 'I\'ve told you %d times already!' %(3893) 
+# print(formatted)
 
-# num = 12
-# num = print(float(num))
+# answer = 'yaaaaaaaaa'
+# print(answer[0])
 
-# print('Enter your name here:')
-# name = input()
-# print('Nice to meet you ' + name)
+# ## Converting Data types with int() and str()
+# decimal = 12.56345783
+# integer = int(decimal)
+# print(integer)
 
-# print('What is your favorite color?')
-# data = input()
-# print('You said ' + data)
+# my_str = 1
+# full = str(my_str)
+# print(type(my_str))
+# my_list = [1, 2, 3]
+# my_list_as_a_string = str(my_list)
+# print(type((my_list_as_a_string)))
 
-# name = 'Arya Stark'
+################# MILES CONVERTER ############################
+
+# kms = input(('How many kilometers did you run today?'))
+# miles = float(kms)/1.60934
+# print(f'Your {kms} kms ride was in {round(miles, 2)} miles! ')
+###############################################################
+
+##Conditional Statements
+## Conditional logic using if statements represents different paths a program can take based on some type of comparison of input.
+
+##  if some condition is True:
+##    do something
+##  elif someth other condition is True:
+##    do something
+##  else: 
+##    do something
+
+# name=''
 # if name == 'Arya Stark':
 #     print('Valar Morghulis')
 # elif name == 'Jon Snow':
 #     print('You know nothing')
-# else:
-#     print('Carry on')
-
-# if 0: #Falsy
-#     print('Yay')
-
-# if 1: #Truthy
-#     print('Yay?')
-
-# animal = input('Enter your favorite animal')
-# if animal:
-#     print(animal + ' is my favorite too!')
-# else: 
-#     print('Hello, animal?')
-# Any string that isn't empty '' is Truthy!
-
-# age = 6
-# age > 2
-# age < 8
-# print(age > 2 and age < 8) 
-# if age > 2 and age < 8:
-#     print('You pay child price')
-
- # city = input('Where do you live?')
-
-# if city == 'Los Angeles' or city == 'San Francisco':
-#     print('You live in California!')
-# else:
-#     print("You don't live in California!!")
-
-# age = 2
-#2-8 $2 ticket
-#65 $5 ticket
-# 10 dollars for everyone else
-
-# if not((age >= 2 and age <= 8) or age >= 65):
-#     print('You pay full price')
-# else: 
-#     print('You have a discount!')
-
-# x = 13
-# y = 13
-# print(x == y) #True
-# print(x is y)
-
-# a = [1,3]
-# b = [1,3]
-# print(a == b) #True
-# print(a is b) #False
-
-# clone = a
-# print(a is clone) #True
-
-# for x in range(1, 10):
-    # print(x)
-    # print(x*x)
-
-# for letter in 'coffee':
-#     print(letter * 10)
-
-# print(range(10))
-# r = range(10)
-# print(list(r))
-# nums = range(1,10,2)
-# nums2 = range(1,50,3)
-# print(list(nums))
-# print(list(nums2))
-
-# for num in range(10):
-#     print(num)
-# for num in range(10,50,2):
-#     print(num)
-
-# b=range(10,20,2)
-# print(list(b))
-
-# for b in range(10,21,2):
-#     print(b)
-
-# times = input('How many times do I have to tell you ')
-# times = int(times)
-# for time in range(times):
-#     print('Clean up your room!!!')
-
-# for luck in range(1,21):
-#     if luck == 4 or luck == 13:
-#         print(f'{luck} is UNLUCKY!!!!!')
-#     elif luck % 2 == 0:
-#         print(f'{luck} is EVEN')
-#     else:
-#        print(f'{luck} is ODD') 
-
-# # Can be written like this for
-
-# for luck in range(1,21):
-#     if luck == 4 or luck == 13:
-#         lucky = 'unlucky'
-#     elif luck % 2 == 0:
-#         lucky = 'even'
-#     else:
-#         lucky = 'odd'
-#     print(f'{luck} is {lucky}') 
-    
-# msg = input("What's the secret password?")
-# while msg != 'bananas':
-#     print('Wrong!')
-#     msg = input("What's the secret password?")
-# print('You got it!')
-
-# for num in range(1,11):
-#     print(num)
-
-# num = 1
-# while num < 11:
-#     print(num)
-#     num += 1
-
-# # This shows how you can use a while loop like a for loop! Have to stop it at the end with a conditional such as num += 1 !! While loops are more flexible than a for loop! 
-
-# for smile in range(1,11):
-#     smile += 1
-#     print("\U0001f600" * smile)
-
-# smile = 1
-# while smile < 11:
-#     print("\U0001f600" * smile)
-#     smile += 1
-
-## Nested loops 
-# for x in range(3): # is saying print range 3 times
-#     for smile in range(1,11):
-#         smile += 1
-#         print("\U0001f600" * smile)
-
-# msg = input("Say Something: ")
-# while msg != "stop":
-#     print(msg)
-#     msg = input()
-#     msg = input()
-# print('UGH, OK!')
-
-# times = int(input("How many times do I have to tell you? "))
-# for time in range(times):
-#     print('CLEAN YOUR ROOM!!')
-#     if time >= 4:
-#         print('Do you listen anymore?? ')
-#         break
-
+# else: print('Who are you?')
 
 # from random import randint
+# choice = randint(1,10)
 
-# num = 0
-# i = 0
-# while num != 5:
-#     i += 1
-#     num = randint(1,10)
-#     print(f'{num}')
-  
+# choice = 7
+# if choice == 7:
+#     print('You are lucky!')
+# else: print('You are not so lucky!')
 
-        
+# num = int(input('Enter a number: '))
+# if (num % 2) == 0:
+#      print('Even')
+# else: print('Odd')
+## can also be written like this
+# num = int(input('Enter a number: '))
+# if num % 2 != 0:
+#     print('Odd')
+# else: print('Even')
+
+## Truthy and Falsy
+## Beside False conditional checks, other things that re naturally falsy include: empty objects, empty strings, None, and zero. Everything else is Truthy!!!!
+
+# from random import choice
+# food = choice(['apple','grape', 'bacon', 'steak', 'worm', 'dirt'])
+
+# food = input('What do you want?')
+# if food == 'apple' or food =='grape':
+#     print('fruit')
+# elif food == 'bacon' or food == 'steak':
+#     print('meat')
+# else:
+#     print('Yuck')
+
+################# Bouncer Code-Along ##########################
+
+# age = input('How old are you? ')
+# if age != '':
+#     age = int(age)
+#     if age >= 21:
+#         print('Enjoy!')
+#     elif age >= 18:
+#         print('Wristband!')
+#     else: print('Go Home!')
+# else: print('Please enter age: ')
+################################################################
+# # NO TOUCHING==NO TOUCHING==NO TOUCHING==NO TOUCHING #| \
+from random import randint                           #|  \
+x = randint(-100, 100)                               #|   \
+while x == 0:  # make sure x isn't zero              #|    \
+    x = randint(-100, 100)                           #|     NO TOUCHING!!!!!! (please)         
+y = randint(-100, 100)                               #|    /
+while y == 0:  # make sure y isn't zero              #|   /
+    y = randint(-100, 100)                           #|  /
+# NO TOUCHING==NO TOUCHING==NO TOUCHING==NO TOUCHING #| /
+x = 84
+y = -12
+if x > 0 and y > 0:
+    print("both positive")
+elif x  < 1 and y < 1: 
+    print('both negative')
+elif  not x > 0 and y < 0: 
+    print("x is positive and y is negative")
+else: 
+    print("y is positive and x is negative")
+###################################################
+# NO TOUCHING ======================================
+
+# from random import choice, randint
+
+# # randomly assigns values to these four variables
+# actually_sick = choice([True, False])
+# kinda_sick = choice([True, False])
+# hate_your_job = choice([True, False])
+# sick_days = randint(0, 10)
+# # _NO TOUCHING ======================================
+# calling_in_sick = True  # set this to True or False with Boolean Logic and Conditionals!
+# if actually_sick and sick_days > 0 :
+#     calling_in_sick = True
+# elif kinda_sick and sick_days and hate_your_job > 0:
+#     calling_in_sick = True
+# else: 
+#     calling_in_sick = False
+# ################################################################
+#################Rock, Paper, Scissors vs1################

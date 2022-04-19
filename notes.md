@@ -7,10 +7,6 @@ folders are in a hierarchy (a tree)
 Files and diretories have <!--!absolute paths
 based on the root where each additional level down adds a '/'. <!--!Example /User/bek/Desktop
 
-<!--% The green -->
-
-directory below is a special directory called 'home', which is also known as '~'Tilde. This is the default directory upon open your terminal.
-
 <!--@ PWD (print working directory-->
 
 PWD will tell you the full absolute path of where you are at!
